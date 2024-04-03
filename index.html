@@ -20,16 +20,16 @@
 <body class="font-poppins" data-theme="light">
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- Home Screen -->
-        <section class="home min-h-screen text-white flex justify-center items-center hidden">
+        <section class="home min-h-screen text-white flex justify-center items-center">
             <div class="flex flex-col items-center gap-6">
                 <h1 class="text-9xl font-anton">ALPHABET CLASH</h1>
                 <p class="text-2xl  font-medium">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="btn bg-white btn-lg text-black text-2xl">Play Now</button>
+                <button onclick="play()" class="btn bg-white btn-lg text-black text-2xl">Play Now</button>
             </div>
         </section>
 
         <!-- Game Center -->
-        <section class="play-ground pt-20">
+        <section class="play-ground pt-20 hidden">
             <div class="flex flex-col items-center gap-20">
                 <!-- Screen -->
                 <div
@@ -95,10 +95,20 @@
         </section>
 
         <!-- Result -->
-        <section class="score">
-
+        <section class="score flex justify-center items-center min-h-screen hidden">
+            <div class="text-white text-center space-y-7 bg-[#FFFFFF33] p-10 rounded-2xl">
+                <h1 class="text-7xl">
+                    <span class="font-bold">Score:</span>
+                    <span>14</span>
+                </h1>
+                <button class="btn bg-white btn-lg text-black text-2xl">Play Again</button>
+                <p>Practice will make you Pro</p>
+            </div>
         </section>
     </main>
+
+
+    <script src="scripts/alpha-clash.js"></script>
 
 </body>
 
