@@ -10,6 +10,25 @@ function play() {
   continueGame();
 }
 
+function handleKeyboardButtonPress(event) {
+  const playerPressed = event.key;
+
+  // console.log(playerPressed);
+
+  const currentAlphabetElement = document.getElementById("current-alphabet");
+  const currentAlphabet = currentAlphabetElement.innerText;
+  // console.log(alphabet);
+  if (playerPressed === currentAlphabet) {
+    console.log("currect");
+    removeBackgroundColorById(playerPressed);
+    continueGame();
+  } else {
+    console.log("wrong");
+  }
+}
+
+document.addEventListener("keyup", handleKeyboardButtonPress);
+
 function continueGame() {
   const alphabet = getRandomAlphabet();
 
