@@ -17,13 +17,35 @@ function handleKeyboardButtonPress(event) {
 
   const currentAlphabetElement = document.getElementById("current-alphabet");
   const currentAlphabet = currentAlphabetElement.innerText;
+
   // console.log(alphabet);
+  // if (playerPressed === currentAlphabet) {
+  //   console.log("correct");
+  //   removeBackgroundColorById(playerPressed);
+  //   const scoreElementText = document.getElementById("score");
+  //   const scoreElement = scoreElementText.innerText;
+  //   const score = parseInt(scoreElement);
+  //   const newScore = score + 1;
+  //   continueGame();
+  //   scoreElementText.innerText = newScore;
+  // } else {
+  //   const lifeElementText = document.getElementById("life");
+  //   const lifeElement = lifeElementText.innerText;
+  //   const life = parseInt(lifeElement);
+  //   const newLife = life - 1;
+  //   lifeElementText.innerText = newLife;
+  // }
   if (playerPressed === currentAlphabet) {
-    console.log("currect");
+    console.log("correct");
     removeBackgroundColorById(playerPressed);
+    const scoreElementText = getElementValeById("score");
+    const newScore = scoreElementText + 1;
     continueGame();
+    setElementValeById("score", newScore);
   } else {
-    console.log("wrong");
+    const lifeElementText = getElementValeById("life");
+    const newLife = lifeElementText - 1;
+    setElementValeById("life", newLife);
   }
 }
 

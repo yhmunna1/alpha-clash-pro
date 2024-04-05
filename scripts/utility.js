@@ -55,3 +55,15 @@ function removeBackgroundColorById(id) {
   const element = document.getElementById(id);
   element.classList.remove("bg-orange-400");
 }
+
+function getElementValeById(elementId) {
+  const element = document.getElementById(elementId);
+  const elementText = element.innerText;
+  const value = parseInt(elementText);
+  return value;
+}
+
+function setElementValeById(elementId, value) {
+  const element = document.getElementById(elementId);
+  element.innerText = value;
+}
