@@ -8,6 +8,11 @@
 function handleKeyboardButtonPress(event) {
   const playerPressed = event.key;
 
+  // Stop the game using the "Esc"
+  if (playerPressed === "Escape") {
+    gameOver();
+  }
+
   // console.log(playerPressed);
 
   const currentAlphabetElement = document.getElementById("current-alphabet");
@@ -79,10 +84,10 @@ function gameOver() {
   showElementById("final-score");
 
   const correctAns = getElementValeById("score");
-  console.log(correctAns);
+  // console.log(correctAns);
   setElementValeById("correct-ans", correctAns);
 
   const currentAlphabet = getElementTextById("current-alphabet");
-  console.log(currentAlphabet);
+  // console.log(currentAlphabet);
   removeBackgroundColorById(currentAlphabet);
 }
